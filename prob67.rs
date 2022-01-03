@@ -10,14 +10,11 @@ fn main() {
         Ok((n, child)) => {
             num = n;
             first_child_index = child;
-        },
+        }
         Err(error) => {
             panic!("fail to read file: {:?}", error)
-        },
+        }
     };
-
-    let mut sorted_num = num.to_vec();
-    sorted_num.sort_by(|a, b| b.cmp(a));
 
     let mut dp: [u32; 5050] = [0; 5050];
     let mut index = dp.len() - 1;
@@ -48,7 +45,7 @@ fn main() {
     println!("{}", dp[0]);
 }
 
-fn read_file() -> Result<([u32; 5050], [usize; 5050]), Box<dyn std::error::Error>>{
+fn read_file() -> Result<([u32; 5050], [usize; 5050]), Box<dyn std::error::Error>> {
     let mut num: [u32; 5050] = [0; 5050];
     let mut child_index: [usize; 5050] = [0; 5050];
     let mut row = 1;
