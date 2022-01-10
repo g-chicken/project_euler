@@ -83,8 +83,8 @@ fn is_pandigital(num: u64) -> bool {
 #[test]
 fn test_get_digit_len() {
     assert_eq!(1, get_digit_len(3), "expected 1 but not (3)");
-    assert_eq!(1, get_digit_len(0), "expected 0 but not (1)");
-    assert_eq!(4, get_digit_len(1234), "expected 1 but not (0)");
+    assert_eq!(1, get_digit_len(0), "expected 1 but not (0)");
+    assert_eq!(4, get_digit_len(1234), "expected 4 but not (1234)");
 }
 
 #[test]
